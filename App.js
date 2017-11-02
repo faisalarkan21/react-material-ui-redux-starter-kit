@@ -27,25 +27,7 @@ class ListKomponent extends React.Component {
             <DividerMod />
 
 
-            {/* <TextFieldMod label="Nama Anda" /> */}
-
-            <div>
-        Clicked: {count} times
-        {' '}
-              <div><button onClick={e => increment()}>Increment</button></div>
-
-              {' '}
-              <div><button onClick={e => decrement()}>Decrement</button></div>
-
-              {' '}
-              <button onClick={this.incrementIfOdd}>
-          Increment if odd
-              </button>
-              {' '}
-              <button onClick={this.incrementAsync}>
-          Increment async
-              </button>
-            </div>
+            <TextFieldMod label="Nama Anda" />
 
           </PaperMod>
         </Grid>

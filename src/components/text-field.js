@@ -26,21 +26,21 @@ class TextFieldMod extends React.Component {
   errorMessage;
   errorStatus;
 
-  // handleChange(event) {
-  //   this.setState({ onlyText: event.target.value });
-  //   const valueText = event.target.value;
+  handleChange(event) {
+    this.setState({ onlyText: event.target.value });
+    const valueText = event.target.value;
 
-  //   if (valueText === '') {
-  //     this.errorMessage = 'Tidak boleh kosong';
-  //     this.errorStatus = true;
-  //   } else if (!validator.regex.onlyString.test(valueText)) {
-  //     this.errorMessage = 'Harus Huruf';
-  //     this.errorStatus = true;
-  //   } else {
-  //     this.errorMessage = '';
-  //     this.errorStatus = false;
-  //   }
-  // }
+    if (valueText === '') {
+      this.errorMessage = 'Tidak boleh kosong';
+      this.errorStatus = true;
+    } else if (!validator.regex.onlyString.test(valueText)) {
+      this.errorMessage = 'Harus Huruf';
+      this.errorStatus = true;
+    } else {
+      this.errorMessage = '';
+      this.errorStatus = false;
+    }
+  }
 
   render() {
     const {
@@ -65,15 +65,15 @@ class TextFieldMod extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.activeUser,
-  };
-}
+// function mapStateToProps(state) {
+//   return {
+//     user: state.activeUser,
+//   };
+// }
 
-function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ selectUser }, dispatch);
-}
+// function matchDispatchToProps(dispatch) {
+//   return bindActionCreators({ selectUser }, dispatch);
+// }
 
 
 TextFieldMod.propTypes = {
