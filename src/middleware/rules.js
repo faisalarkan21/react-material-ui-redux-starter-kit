@@ -7,24 +7,24 @@ const filterRegex = {
 const customMessage = {
   OnlyString: {
     statusError: 'Input Hanya Boleh Huruf',
-    statusNull: 'Input Tidak Boleh Kosong',
+
   },
+  statusNull: 'Input Tidak Boleh Kosong',
 };
 
 
-function messageError(err) {
-  console.log(customMessage.OnlyString);
+function errorMessage(err) {
   switch (err) {
     case 'onlyString':
       return customMessage.OnlyString.statusError;
     case 'notNull':
-      return customMessage.OnlyString.statusNull;
+      return customMessage.statusNull;
     default:
       return '';
   }
 }
 
 module.exports = {
-  messageError, filterRegex,
+  errorMessage, filterRegex,
 };
 

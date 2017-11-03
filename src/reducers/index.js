@@ -7,7 +7,7 @@ const allReducers = combineReducers({
 
   users: userReducer,
   activeUser: ActiveUserReducer,
-  messageError: ruleValidator,
+  errorMessage: ruleValidator,
 
 });
 

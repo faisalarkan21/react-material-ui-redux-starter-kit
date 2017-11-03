@@ -8,16 +8,18 @@ import { rulesValidator } from '../actions/index';
 
 class TextFieldMod extends React.Component {
   static propTypes ={
-    status: PropTypes.bool.isRequired,
-    messageError: PropTypes.string,
+    errorMessage: PropTypes.string,
     validator: PropTypes.func.isRequired,
   }
   render() {
-    const { messageError, validator } = this.props;
+    const { errorMessage, validator } = this.props;
+
     return (
       <div>
         <TextField
-          label={messageError}
+          error={!!errorMessage}
+          label="Nama anda"
+          helperText={errorMessage}
           onChange={validator}
         />
       </div>
@@ -28,7 +30,7 @@ class TextFieldMod extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    messageError: state.messageError,
+    errorMessage: state.errorMessage,
   };
 }
 

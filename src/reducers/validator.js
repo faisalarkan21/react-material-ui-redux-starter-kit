@@ -1,12 +1,12 @@
 
 import * as ActionType from '../actions';
-import { messageError, filterRegex } from '../middleware/rules';
+import { errorMessage, filterRegex } from '../middleware/rules';
 
 function onlyText(value) {
   if (value === '') {
-    return messageError('notNull');
+    return errorMessage('notNull');
   } else if (!filterRegex.String.test(value)) {
-    return messageError('onlyString');
+    return errorMessage('onlyString');
   }
   return null;
 }

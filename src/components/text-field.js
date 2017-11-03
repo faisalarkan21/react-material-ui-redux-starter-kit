@@ -2,11 +2,6 @@ import React from 'react';
 import Input, { InputLabel } from 'material-ui/Input';
 import PropTypes from 'prop-types';
 import { FormControl, FormHelperText } from 'material-ui/Form';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import globalStyle from './style';
-import validator from './validator';
 
 
 class TextFieldMod extends React.Component {
