@@ -1,6 +1,6 @@
 
 import * as ActionType from '../actions';
-import { errorMessage, filterRegex } from '../middleware/rules';
+import { errorMessage, filterRegex } from '../middleware/rulesValidator';
 
 function onlyText(value) {
   if (value === '') {

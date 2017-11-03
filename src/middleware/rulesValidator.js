@@ -1,4 +1,3 @@
-
 const filterRegex = {
   String: /^[a-zA-Z]+$/,
 };
