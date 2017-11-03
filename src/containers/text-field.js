@@ -12,7 +12,6 @@ class TextFieldMod extends React.Component {
   }
   render() {
     const { errorMessage, validator } = this.props;
-
     return (
       <div>
         <TextField

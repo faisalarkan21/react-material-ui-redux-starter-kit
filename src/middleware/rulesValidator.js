@@ -6,7 +6,6 @@ const filterRegex = {
 const customMessage = {
   OnlyString: {
     statusError: 'Input Hanya Boleh Huruf',
-
   },
   statusNull: 'Input Tidak Boleh Kosong',
 };
