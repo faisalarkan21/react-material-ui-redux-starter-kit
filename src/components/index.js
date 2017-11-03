@@ -1,27 +1,27 @@
+import React from 'react';
+import UserList from '../containers/user-list';
+import UserDetail from '../containers/user-detail';
+import TextField from '../containers/text-field';
 
-/**
- *
- * List Collection Mod UI
- *
- */
+const App = () => (
 
+  <div>
 
-/**
- * List Valid For Export
- *
- * module.exports.PaperSheet = PaperSheet;
- *
- * module.exports.PaperSheet = function PaperSheet
- *
- * // just sometimes
- * export default DividerMod*
- *
- */
+    <h2> User List </h2>
+    <UserList />
+
+    <hr />
+    <UserDetail />
 
 
-export { CodeStyleMod, DisplayMod1 } from './typography';
-export { DividerMod } from './other-components';
-export { PaperMod } from './paper';
-export { TextFieldMod } from './text-field';
-export { Greeting } from './test';
+    <hr />
 
+    <TextField />
+
+
+  </div>
+
+);
+
+
+export default App;

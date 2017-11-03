@@ -2,9 +2,9 @@ const webpack = require('webpack');
 
 const config = {
   devtool: 'source-map', // for display source map in browser
-  entry: ['babel-polyfill', './main.js'], // entry point
+  entry: ['babel-polyfill', './index.js'], // entry point
   output: {
-    filename: 'index.js', // place where bundled app will be served
+    filename: 'bundle.js', // place where bundled app will be served
   },
   devServer: {
     inline: true, // autorefresh

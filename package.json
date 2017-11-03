@@ -50,6 +50,7 @@
     "react-redux": "^5.0.6",
     "react-text-mask": "^5.0.2",
     "redux": "^3.7.2",
+    "redux-form": "^7.1.2",
     "redux-logger": "^3.0.6",
     "typeface-roboto": "0.0.41"
   }
