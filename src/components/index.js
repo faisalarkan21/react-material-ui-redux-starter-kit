@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
+import PropTypes from 'prop-types';
 import { DisplayMod1, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
@@ -17,7 +18,12 @@ class Dashboard extends Component {
               <DividerMod />
 
 
-              <TextFieldMod label="Nama anda"  />
+              <TextFieldMod
+                label="Nama anda"
+                isError={this.props.TextIsError}
+                helperText={this.props.TextErrorMessage}
+                action={this.props.TextAction}
+              />
 
 
             </PaperMod>
@@ -29,6 +35,13 @@ class Dashboard extends Component {
     );
   }
 }
+
+
+Dashboard.propTypes = {
+  TextIsError: PropTypes.string,
+  TextErrorMessage: PropTypes.string,
+
+};
 
 
 export default Dashboard;

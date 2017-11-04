@@ -20,7 +20,7 @@ TextFieldMod.propTypes = {
   label: PropTypes.string,
   isError: PropTypes.string,
   errorMessage: PropTypes.string,
-  action: PropTypes.node,
+
 };
 
 
