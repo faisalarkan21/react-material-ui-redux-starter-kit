@@ -17,8 +17,9 @@ function TextFieldMod(props) {
 }
 
 TextFieldMod.propTypes = {
+  action: PropTypes.func.isRequired,
   label: PropTypes.string,
-  isError: PropTypes.string,
+  isError: PropTypes.bool,
   errorMessage: PropTypes.string,
 
 };

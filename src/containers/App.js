@@ -17,7 +17,11 @@ class App extends React.Component {
     const { errorMessage, validator } = this.props;
     return (
       <div>
-        <Dashboard TextAction={validator} TextErrorMessage="asas" />
+        <Dashboard
+          TextAction={validator}
+          TextIsError={!!errorMessage}
+          TextErrorMessage={errorMessage}
+        />
 
 
       </div>

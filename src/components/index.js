@@ -21,7 +21,7 @@ class Dashboard extends Component {
               <TextFieldMod
                 label="Nama anda"
                 isError={this.props.TextIsError}
-                helperText={this.props.TextErrorMessage}
+                errorMessage={this.props.TextErrorMessage}
                 action={this.props.TextAction}
               />
 
@@ -38,7 +38,8 @@ class Dashboard extends Component {
 
 
 Dashboard.propTypes = {
-  TextIsError: PropTypes.string,
+  TextAction: PropTypes.func.isRequired,
+  TextIsError: PropTypes.bool,
   TextErrorMessage: PropTypes.string,
 
 };
