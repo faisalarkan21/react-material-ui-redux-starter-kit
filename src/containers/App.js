@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { rulesValidator } from '../actions/index';
+import Dashboard from '../components';
 
 class TextFieldMod extends React.Component {
   static propTypes ={
@@ -14,12 +14,7 @@ class TextFieldMod extends React.Component {
     const { errorMessage, validator } = this.props;
     return (
       <div>
-        <TextField
-          error={!!errorMessage}
-          label="Nama anda"
-          helperText={errorMessage}
-          onChange={validator}
-        />
+        <Dashboard />
       </div>
 
     );
