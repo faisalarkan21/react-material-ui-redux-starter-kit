@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Grid from 'material-ui/Grid';
+// import Grid from 'material-ui/Grid';
 import PropTypes from 'prop-types';
-import { DisplayMod1, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
+import { DisplayMod1, DisplayMod2, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
 class Dashboard extends Component {
@@ -9,26 +11,40 @@ class Dashboard extends Component {
     return (
 
       <div>
-        <Grid container justify="center" spacing={8}>
-          <Grid item xs={8}>
+        <Grid>
+          <Col mdOffset={1} md={10}>
             <PaperMod elevation={19}>
-              <DisplayMod1 text="Test Komponent">
-                <CodeStyleMod text="Material UI" />
-              </DisplayMod1>
+              <Row >
+                <DisplayMod1 text="Components ">
+                  <CodeStyleMod text="Material UI" />
+                </DisplayMod1>
+              </Row>
               <DividerMod />
-
-
-              <TextFieldMod
-                label="Nama anda"
-                isError={this.props.TextIsError}
-                errorMessage={this.props.TextErrorMessage}
-                action={this.props.TextAction}
-              />
-
-
+              <Row>
+                <Col >
+                  <DisplayMod2 text="Text Only, With Warning" />
+                  <TextFieldMod
+                    label="Your name.. "
+                    isError={this.props.TextIsError}
+                    errorMessage={this.props.TextErrorMessage}
+                    action={this.props.TextAction}
+                  />
+                </Col>
+                <Col mdOffset={1} >
+                  <DisplayMod2 text="Text Only, With Warning" />
+                  <TextFieldMod
+                    label="Your name.. "
+                    isError={this.props.TextIsError}
+                    errorMessage={this.props.TextErrorMessage}
+                    action={this.props.TextAction}
+                  />
+                </Col>
+              </Row>
             </PaperMod>
-          </Grid>
+          </Col>
         </Grid>
+
+
       </div>
 
 
