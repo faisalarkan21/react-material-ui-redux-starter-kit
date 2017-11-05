@@ -13,8 +13,8 @@ class Dashboard extends Component {
           <Col xs={12} md={8} lg={9} lgOffset={2} >
             <PaperMod elevation={19}>
               <Row >
-                <DisplayMod1 text="Components ">
-                  <CodeStyleMod text="Material UI" />
+                <DisplayMod1 text="Material UI">
+                  <CodeStyleMod text="Components" />
                 </DisplayMod1>
               </Row>
               <DividerMod />
