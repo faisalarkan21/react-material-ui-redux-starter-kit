@@ -1,11 +1,11 @@
 const globalStyle = {
   codeStyle: {
     color: '#1565C0',
-    marginLeft: 10,
+    marginLeft: 5,
   },
   styleFont1: {
-    marginBottom: 10,
     marginTop: 10,
+    marginBottom: 10,
   },
   divider: {
     marginBottom: 20,
