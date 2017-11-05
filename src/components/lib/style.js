@@ -4,8 +4,7 @@ const globalStyle = {
     marginLeft: 10,
   },
   styleFont1: {
-    marginTop: 10,
-    marginBottom: 10,
+    margin: 20,
   },
   divider: {
     marginBottom: 20,
@@ -21,8 +20,7 @@ const globalStyle = {
     width: 200,
   },
   col: {
-    marginLeft: 30,
-    marginRight: 30,
+    margin: 25,
   },
 };
 

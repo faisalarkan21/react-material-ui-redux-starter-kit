@@ -12,7 +12,7 @@ class Dashboard extends Component {
           <ColMod xs={12} md={8} lg={9} lgOffset={1} >
             <PaperMod elevation={19}>
               <Row >
-                <DisplayMod1 text="Material UI">
+                <DisplayMod1 text="React Material UI">
                   <CodeStyleMod text="Components" />
                 </DisplayMod1>
               </Row>
