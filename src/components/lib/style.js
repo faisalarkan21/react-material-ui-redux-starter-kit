@@ -13,12 +13,16 @@ const globalStyle = {
   },
   paper: {
     padding: 30,
-    marginTop: 30,
+    marginTop: 40,
   },
   textField: {
     marginTop: 10,
     marginBottom: 15,
     width: 200,
+  },
+  col: {
+    marginLeft: 30,
+    marginRight: 30,
   },
 };
 
