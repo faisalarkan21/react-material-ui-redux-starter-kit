@@ -24,13 +24,10 @@ class App extends React.Component {
           TextIsError={!!errorMessageText}
           TextErrorMessage={errorMessageText}
 
-
           NumberAction={validatorNumbers}
           NumberIsError={!!errorMessageNumbers}
           NumberMessage={errorMessageNumbers}
         />
-
-
       </div>
 
     );

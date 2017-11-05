@@ -20,18 +20,22 @@ class Dashboard extends Component {
               <DividerMod />
               <Row>
                 <Col>
-                  <DisplayMod2 text="Text Only, With Warning" />
                   <TextFieldMod
-                    label="Your name.. "
+                    label="Text only type 1"
+                    placeholder="Your name.. "
+                    iconsType="fa-eercast"
+                    isFloating
                     isError={this.props.TextIsError}
                     errorMessage={this.props.TextErrorMessage}
                     action={this.props.TextAction}
                   />
                 </Col>
                 <Col lgOffset={1} >
-                  <DisplayMod2 text="Number Only, With Warning" />
                   <TextFieldMod
-                    label="Your name.. "
+                    label="Numbers Only type 1"
+                    placeholder="Some numbers.. "
+                    iconsType="fa-user-circle-o"
+                    isFloating
                     isError={this.props.NumberIsError}
                     errorMessage={this.props.NumberMessage}
                     action={this.props.NumberAction}
@@ -41,11 +45,7 @@ class Dashboard extends Component {
             </PaperMod>
           </Col>
         </Grid>
-
-
       </div>
-
-
     );
   }
 }

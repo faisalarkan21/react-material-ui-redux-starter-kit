@@ -16,6 +16,7 @@ const globalStyle = {
     marginTop: 30,
   },
   textField: {
+    marginTop: 10,
     width: 200,
   },
 };

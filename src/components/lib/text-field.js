@@ -10,7 +10,12 @@ function TextFieldMod(props) {
       style={globalStyle.textField}
       label={props.label}
       error={props.isError}
+      InputLabelProps={{
+            shrink: props.isFloating,
+      }}
+      placeholder={props.placeholder}
       helperText={props.errorMessage}
+      className="textfield-mobile"
       onChange={props.action}
     />
   );
@@ -21,7 +26,8 @@ TextFieldMod.propTypes = {
   label: PropTypes.string,
   isError: PropTypes.bool,
   errorMessage: PropTypes.string,
-
+  isFloating: PropTypes.bool,
+  placeholder: PropTypes.string,
 };
 
 
