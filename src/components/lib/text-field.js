@@ -1,7 +1,11 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import PropTypes from 'prop-types';
+import Input, { InputLabel } from 'material-ui/Input';
+import { FormControl } from 'material-ui/Form';
+
 import globalStyle from './style';
+import { NumberFormatRp } from '../../middleware/FormatCustom';
 
 
 function TextFieldMod(props) {
@@ -31,4 +35,22 @@ TextFieldMod.propTypes = {
 };
 
 
-export { TextFieldMod };
+function TextFieldRupiah(props) {
+  return (
+    <FormControl style={globalStyle.textField}>
+      <InputLabel shrink htmlFor="currency">{props.label}</InputLabel>
+      <Input
+        id="currency"
+        placeholder="Rp. 0,00"
+        inputComponent={NumberFormatRp}
+      />
+    </FormControl>
+  );
+}
+
+
+TextFieldRupiah.propTypes = {
+  label: PropTypes.string,
+};
+
+export { TextFieldMod, TextFieldRupiah };
