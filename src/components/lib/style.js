@@ -3,8 +3,9 @@ const globalStyle = {
     color: '#1565C0',
     marginLeft: 10,
   },
-  display1: {
+  styleFont1: {
     marginBottom: 10,
+    marginTop: 10,
   },
   divider: {
     marginBottom: 20,

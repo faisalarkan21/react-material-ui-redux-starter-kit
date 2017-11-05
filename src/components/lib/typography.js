@@ -16,7 +16,7 @@ CodeStyleMod.propTypes = {
 
 function DisplayMod1(props) {
   return (
-    <Typography style={globalStyle.display1} type="display1" component="h3">
+    <Typography style={globalStyle.styleFont1} type="display1" component="h3">
       {props.text}
       {props.children}
     </Typography>
@@ -28,5 +28,19 @@ DisplayMod1.propTypes = {
   children: PropTypes.node,
 };
 
+function DisplayMod2(props) {
+  return (
+    <Typography style={globalStyle.styleFont1} type="subheading" component="h3">
+      {props.text}
+      {props.children}
+    </Typography>
+  );
+}
 
-export { CodeStyleMod, DisplayMod1 };
+DisplayMod2.propTypes = {
+  text: PropTypes.string,
+  children: PropTypes.node,
+};
+
+
+export { CodeStyleMod, DisplayMod1, DisplayMod2 };
