@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import TextField from 'material-ui/TextField';
-import { DisplayMod1, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from '../components/lib';
-
 import { rulesValidator } from '../actions/index';
 import Dashboard from '../components';
 
