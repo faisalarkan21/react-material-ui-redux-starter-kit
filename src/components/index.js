@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import Grid from 'material-ui/Grid';
 import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
 import { DisplayMod1, DisplayMod2, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
@@ -12,7 +10,7 @@ class Dashboard extends Component {
 
       <div>
         <Grid>
-          <Col mdOffset={1} md={10}>
+          <Col xs={12} md={8} lg={9} lgOffset={2} >
             <PaperMod elevation={19}>
               <Row >
                 <DisplayMod1 text="Components ">
@@ -21,7 +19,7 @@ class Dashboard extends Component {
               </Row>
               <DividerMod />
               <Row>
-                <Col >
+                <Col>
                   <DisplayMod2 text="Text Only, With Warning" />
                   <TextFieldMod
                     label="Your name.. "
@@ -30,7 +28,7 @@ class Dashboard extends Component {
                     action={this.props.TextAction}
                   />
                 </Col>
-                <Col mdOffset={1} >
+                <Col lgOffset={1} >
                   <DisplayMod2 text="Text Only, With Warning" />
                   <TextFieldMod
                     label="Your name.. "
