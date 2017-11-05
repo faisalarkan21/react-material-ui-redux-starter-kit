@@ -29,12 +29,12 @@ class Dashboard extends Component {
                   />
                 </Col>
                 <Col lgOffset={1} >
-                  <DisplayMod2 text="Text Only, With Warning" />
+                  <DisplayMod2 text="Number Only, With Warning" />
                   <TextFieldMod
                     label="Your name.. "
-                    isError={this.props.TextIsError}
-                    errorMessage={this.props.TextErrorMessage}
-                    action={this.props.TextAction}
+                    isError={this.props.NumberIsError}
+                    errorMessage={this.props.NumberMessage}
+                    action={this.props.NumberAction}
                   />
                 </Col>
               </Row>
@@ -55,6 +55,9 @@ Dashboard.propTypes = {
   TextAction: PropTypes.func.isRequired,
   TextIsError: PropTypes.bool,
   TextErrorMessage: PropTypes.string,
+  NumberAction: PropTypes.func.isRequired,
+  NumberIsError: PropTypes.bool,
+  NumberMessage: PropTypes.string,
 
 };
 

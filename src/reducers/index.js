@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 
-import ruleValidator from './validator';
+import { reducerText, reducerNumbers } from './validator';
 
 const allReducers = combineReducers({
-  errorMessage: ruleValidator,
+  errorMessageText: reducerText,
+  errorMessageNumbers: reducerNumbers,
 });
 
 export default allReducers;

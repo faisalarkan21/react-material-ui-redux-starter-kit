@@ -2,22 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { rulesValidator } from '../actions/index';
+import { textCheck, numbersCheck } from '../actions/index';
 import Dashboard from '../components';
 
 class App extends React.Component {
   static propTypes ={
-    errorMessage: PropTypes.string,
-    validator: PropTypes.func.isRequired,
+    errorMessageNumbers: PropTypes.string,
+    errorMessageText: PropTypes.string,
+    validatorText: PropTypes.func.isRequired,
+    validatorNumbers: PropTypes.func.isRequired,
   }
   render() {
-    const { errorMessage, validator } = this.props;
+    const {
+      errorMessageNumbers, errorMessageText, validatorText, validatorNumbers,
+    } = this.props;
+
     return (
       <div>
         <Dashboard
-          TextAction={validator}
-          TextIsError={!!errorMessage}
-          TextErrorMessage={errorMessage}
+          TextAction={validatorText}
+          TextIsError={!!errorMessageText}
+          TextErrorMessage={errorMessageText}
+
+
+          NumberAction={validatorNumbers}
+          NumberIsError={!!errorMessageNumbers}
+          NumberMessage={errorMessageNumbers}
         />
 
 
@@ -29,12 +39,16 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    errorMessage: state.errorMessage,
+    errorMessageText: state.errorMessageText,
+    errorMessageNumbers: state.errorMessageNumbers,
   };
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ validator: rulesValidator }, dispatch);
+  return bindActionCreators({
+    validatorText: textCheck,
+    validatorNumbers: numbersCheck,
+  }, dispatch);
 }
 
 
