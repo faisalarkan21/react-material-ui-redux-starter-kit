@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row } from 'react-flexbox-grid';
-import { ColMod, DisplayMod1, TextFieldRupiah, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
+import { ColMod, DisplayMod1, TextFieldRupiah, TextFieldStrictNum, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
 class Dashboard extends Component {
@@ -21,7 +21,7 @@ class Dashboard extends Component {
                 <ColMod>
                   <TextFieldMod
                     label="Text only type 1"
-                    placeholder="Your name.. "
+                    placeholder="Type Some text.. "
                     isFloating
                     isError={this.props.TextIsError}
                     errorMessage={this.props.TextErrorMessage}
@@ -31,17 +31,40 @@ class Dashboard extends Component {
                 <ColMod lgOffset={0} >
                   <TextFieldMod
                     label="Numbers Only type 1"
-                    placeholder="Some numbers.. "
+                    placeholder="Type Some numbers.. "
                     isFloating
                     isError={this.props.NumberIsError}
                     errorMessage={this.props.NumberMessage}
                     action={this.props.NumberAction}
                   />
                 </ColMod>
-                <ColMod lgOffset={0} >
+                <ColMod>
                   <TextFieldRupiah
                     label="Currency Format."
                     isFloating
+                    isError={this.props.NumberIsError}
+                    errorMessage={this.props.NumberMessage}
+                    action={this.props.NumberAction}
+                  />
+                </ColMod>
+              </Row>
+              <Row>
+                <ColMod >
+                  <TextFieldStrictNum
+                    label="Only Text Only Type 1"
+                    isFloating
+                    placeholder="Type Some text.. "
+                    isError={this.props.NumberIsError}
+                    errorMessage={this.props.NumberMessage}
+                    action={this.props.NumberAction}
+                  />
+                </ColMod>
+
+                <ColMod>
+                  <TextFieldStrictNum
+                    label="Numbers Only Type 2"
+                    isFloating
+                    placeholder="Type Some numbers.. "
                     isError={this.props.NumberIsError}
                     errorMessage={this.props.NumberMessage}
                     action={this.props.NumberAction}
