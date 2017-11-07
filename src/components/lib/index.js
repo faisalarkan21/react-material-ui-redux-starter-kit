@@ -6,6 +6,6 @@
 export { CodeStyleMod, DisplayMod1, DisplayMod2 } from './typography';
 export { DividerMod } from './other-components';
 export { PaperMod } from './paper';
-export { TextFieldMod, TextFieldRupiah } from './text-field';
+export { TextFieldMod, TextFieldRupiah, TextFieldStrictNum } from './text-field';
 export { ColMod } from './Col';
 

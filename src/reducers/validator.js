@@ -28,6 +28,13 @@ const reducerText = (state = null, action) => {
   return state;
 };
 
+const reducerStrictText = (state = null, action) => {
+  if (action.type === ActionType.TEXT_ONLY) {
+    return onlyText(action.payload);
+  }
+  return state;
+};
+
 
 const reducerNumbers = (state = null, action) => {
   if (action.type === ActionType.NUMBERS_ONLY) {
@@ -37,6 +44,6 @@ const reducerNumbers = (state = null, action) => {
 };
 
 export {
-  reducerText, reducerNumbers,
+  reducerText, reducerNumbers, reducerStrictText,
 };
 
