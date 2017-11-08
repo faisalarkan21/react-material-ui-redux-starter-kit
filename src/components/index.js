@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row } from 'react-flexbox-grid';
-import { ColMod, DisplayMod1, TextFieldRupiah, TextFieldStrictNum, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
+import { ColMod, DisplayMod1, TextFieldRupiah, TextFieldStrictNum, TextFieldMaskText, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
 class Dashboard extends Component {
@@ -20,7 +20,7 @@ class Dashboard extends Component {
               <Row>
                 <ColMod>
                   <TextFieldMod
-                    label="Text only type 1"
+                    label="Warning Text only"
                     placeholder="Type Some text.. "
                     isFloating
                     isError={this.props.TextIsError}
@@ -30,7 +30,7 @@ class Dashboard extends Component {
                 </ColMod>
                 <ColMod lgOffset={0} >
                   <TextFieldMod
-                    label="Numbers Only type 1"
+                    label="Warning Numbers Only"
                     placeholder="Type Some numbers.. "
                     isFloating
                     isError={this.props.NumberIsError}
@@ -50,19 +50,16 @@ class Dashboard extends Component {
               </Row>
               <Row>
                 <ColMod >
-                  <TextFieldStrictNum
-                    label="Only Text Only Type 1"
+                  <TextFieldMaskText
+                    label="Input Mask Phone Number"
                     isFloating
-                    placeholder="Type Some text.. "
-                    isError={this.props.NumberIsError}
-                    errorMessage={this.props.NumberMessage}
-                    action={this.props.NumberAction}
+                    placeholder="(555) 123-4444"
                   />
                 </ColMod>
 
                 <ColMod>
                   <TextFieldStrictNum
-                    label="Numbers Only Type 2"
+                    label="Strict Numbers Only"
                     isFloating
                     placeholder="Type Some numbers.. "
                     isError={this.props.NumberIsError}

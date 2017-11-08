@@ -7,7 +7,7 @@ import NumberFormat from 'react-number-format';
 
 
 import globalStyle from './style';
-import { NumberFormatRp } from '../../middleware/FormatCustom';
+import { NumberFormatRp, TextMaskCustomPhone } from '../../middleware/FormatCustom';
 
 
 function TextFieldMod(props) {
@@ -74,5 +74,23 @@ TextFieldStrictNum.propTypes = {
   placeholder: PropTypes.string,
 };
 
+function TextFieldMaskText(props) {
+  return (
+    <FormControl style={globalStyle.textField}>
+      <InputLabel shrink htmlFor="MaskText">{props.label}</InputLabel>
+      <Input
+        id="MaskText"
+        placeholder={props.placeholder}
+        inputComponent={TextMaskCustomPhone}
+      />
+    </FormControl>
+  );
+}
 
-export { TextFieldMod, TextFieldRupiah, TextFieldStrictNum };
+TextFieldMaskText.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+};
+
+
+export { TextFieldMod, TextFieldRupiah, TextFieldStrictNum, TextFieldMaskText };
