@@ -20,7 +20,7 @@ const globalStyle = {
     width: 200,
   },
   col: {
-    margin: 25,
+    margin: 15,
   },
 };
 
