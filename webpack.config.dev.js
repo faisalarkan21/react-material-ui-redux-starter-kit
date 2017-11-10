@@ -7,6 +7,7 @@ const config = {
     filename: 'bundle.js', // place where bundled app will be served
   },
   devServer: {
+    historyApiFallback: true,
     inline: true, // autorefresh
     port: 8080, // development port server
   },
