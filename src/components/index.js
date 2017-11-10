@@ -41,22 +41,19 @@ class Dashboard extends Component {
                 <ColMod>
                   <TextFieldRupiah
                     label="Currency Format."
-                    isFloating
-                    isError={this.props.NumberIsError}
-                    errorMessage={this.props.NumberMessage}
-                    action={this.props.NumberAction}
                   />
                 </ColMod>
               </Row>
               <Row>
                 <ColMod >
-                  <TextFieldMaskText
-                    label="Input Mask Phone Number"
+                  <TextFieldMod
+                    label="Strict Text Only"
+                    placeholder="Type Some text.. "
                     isFloating
-                    placeholder="(555) 123-4444"
+                    value={this.props.valueStrictText}
+                    action={this.props.StrictTextAction}
                   />
                 </ColMod>
-
                 <ColMod>
                   <TextFieldStrictNum
                     label="Strict Numbers Only"
@@ -65,6 +62,12 @@ class Dashboard extends Component {
                     isError={this.props.NumberIsError}
                     errorMessage={this.props.NumberMessage}
                     action={this.props.NumberAction}
+                  />
+                </ColMod>
+                <ColMod >
+                  <TextFieldMaskText
+                    label="Phone Number Input Mask "
+                    placeholder="(555) 123-4444"
                   />
                 </ColMod>
               </Row>
@@ -79,11 +82,13 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
   TextAction: PropTypes.func.isRequired,
+  StrictTextAction: PropTypes.func.isRequired,
+  NumberAction: PropTypes.func.isRequired,
   TextIsError: PropTypes.bool,
   TextErrorMessage: PropTypes.string,
-  NumberAction: PropTypes.func.isRequired,
   NumberIsError: PropTypes.bool,
   NumberMessage: PropTypes.string,
+  valueStrictText: PropTypes.string,
 
 };
 
