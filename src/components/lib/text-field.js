@@ -22,6 +22,7 @@ function TextFieldMod(props) {
       placeholder={props.placeholder}
       helperText={props.errorMessage}
       className="textfield-mobile"
+      value={props.value}
       onChange={props.action}
     />
   );
@@ -34,6 +35,7 @@ TextFieldMod.propTypes = {
   errorMessage: PropTypes.string,
   isFloating: PropTypes.bool,
   placeholder: PropTypes.string,
+  value: PropTypes.string,
 };
 
 
