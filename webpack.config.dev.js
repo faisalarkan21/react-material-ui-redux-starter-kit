@@ -10,6 +10,7 @@ const config = {
     historyApiFallback: true,
     inline: true, // autorefresh
     port: 8080, // development port server
+    overlay: true,
   },
   plugins: [
     new webpack.DefinePlugin({
