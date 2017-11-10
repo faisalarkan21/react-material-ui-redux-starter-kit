@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { onlyTextCheck, onlyNumbersCheck, strictTextCheck } from '../actions/index';
-import ManualComponent from '../components/manual-index';
+import ManualComponent from '../components/components-index';
 
-class App extends React.Component {
+class customComponent extends React.Component {
   static propTypes ={
     errorMessageNumbers: PropTypes.string,
     errorMessageText: PropTypes.string,
@@ -61,5 +61,5 @@ function matchDispatchToProps(dispatch) {
 }
 
 
-export default connect(mapStateToProps, matchDispatchToProps)(App);
+export default connect(mapStateToProps, matchDispatchToProps)(customComponent);
 

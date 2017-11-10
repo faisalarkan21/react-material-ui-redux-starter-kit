@@ -2,6 +2,7 @@ const globalStyle = {
   codeStyle: {
     color: '#1565C0',
     marginLeft: 10,
+    fontSize: 32,
   },
   styleFont1: {
     margin: 20,

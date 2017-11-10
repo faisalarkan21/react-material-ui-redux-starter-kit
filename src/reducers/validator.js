@@ -6,7 +6,7 @@ import * as ActionType from '../actions';
  * @param {*} action action from actions/index.
  */
 
-const reducerNumbers = (state = null, action) => {
+const reducerNumbers = (state = '', action) => {
   if (action.type === ActionType.NUMBERS_ONLY) {
     return action.payload;
   }
@@ -18,7 +18,7 @@ const reducerNumbers = (state = null, action) => {
  * @param {*} action action from actions/index.
  */
 
-const reducerText = (state = null, action) => {
+const reducerText = (state = '', action) => {
   if (action.type === ActionType.TEXT_ONLY) {
     return action.payload;
   }

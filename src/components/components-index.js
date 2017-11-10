@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row } from 'react-flexbox-grid';
-import { ColMod, DisplayMod1, TextFieldRupiah, TextFieldStrictNum, TextFieldMaskText, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
+import { ColMod, DisplayMod1, TextFieldRupiah,
+  TextFieldStrictNum, TextFieldMaskText, CodeStyleMod,
+  DividerMod, PaperMod, TextFieldMod } from './lib';
 
 
-class Dashboard extends Component {
+class DashboardComponent extends Component {
   render() {
     return (
       <div>
@@ -80,7 +82,7 @@ class Dashboard extends Component {
 }
 
 
-Dashboard.propTypes = {
+DashboardComponent.propTypes = {
   TextAction: PropTypes.func.isRequired,
   StrictTextAction: PropTypes.func.isRequired,
   NumberAction: PropTypes.func.isRequired,
@@ -93,4 +95,4 @@ Dashboard.propTypes = {
 };
 
 
-export default Dashboard;
+export default DashboardComponent;
