@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from './src/store/configureStore';
 import Root from './src/containers/Root';
+import './public/styles/base.scss';
 
 // eslint-disable-next-line
 import 'typeface-roboto'; 

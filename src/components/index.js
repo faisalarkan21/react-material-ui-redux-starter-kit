@@ -23,8 +23,8 @@ class Dashboard extends Component {
               </Row>
               <DividerMod />
 
-              <Link to="/custom-components"><DisplayMod2 text="Custom Material UI With Redux" /> </Link>
-              <Link to="/redux-form"><DisplayMod2 text="Redux Form" /> </Link>
+              <Link className="link" to="/custom-components"><DisplayMod2 text="Custom Material UI With Redux" /> </Link>
+              <Link className="link" to="/redux-form"><DisplayMod2 text="Redux Form" /> </Link>
 
             </PaperMod>
           </ColMod>

@@ -9,6 +9,8 @@ const globalStyle = {
     fontSize: 50,
   },
   styleFont2: {
+    color: '#1565C0',
+    Hover: '#ffff',
     margin: 10,
     fontSize: 20,
   },
