@@ -2,11 +2,11 @@ const globalStyle = {
   codeStyle: {
     color: '#1565C0',
     marginLeft: 10,
-    fontSize: 32,
+    fontSize: 30,
   },
   styleFont1: {
     margin: 20,
-    fontSize: 50,
+    fontSize: 45,
   },
   styleFont2: {
     color: '#1565C0',
@@ -20,7 +20,7 @@ const globalStyle = {
   },
   paper: {
     padding: 30,
-    marginTop: 40,
+    marginTop: 20,
   },
   textField: {
     marginTop: 10,
@@ -28,7 +28,14 @@ const globalStyle = {
     width: 200,
   },
   col: {
-    margin: 15,
+    padding: 25,
+  },
+  list: {
+    width: '100%',
+    maxWidth: 360,
+  },
+  headerList: {
+    color: '#1565C0',
   },
 };
 

@@ -1,5 +1,18 @@
-
-.link{
-    text-decoration: none;    
+.link {
+    text-decoration: none;
 }
 
+/**
+ * Mobile CSS
+ * 
+ */
+
+@media (max-width: 1000px) {
+    .main-title {
+        font-size: 35px !important;
+        margin:0px;
+    }
+    .col{
+        padding: 12px !important;
+    }
+}

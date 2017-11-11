@@ -16,7 +16,7 @@ CodeStyleMod.propTypes = {
 
 function DisplayMod1(props) {
   return (
-    <Typography style={globalStyle.styleFont1} type="display1" component="h3">
+    <Typography className="main-title" style={globalStyle.styleFont1} type="display1" component="h3">
       {props.text}
       {props.children}
     </Typography>

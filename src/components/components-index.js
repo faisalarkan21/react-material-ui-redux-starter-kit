@@ -11,7 +11,7 @@ class DashboardComponent extends Component {
     return (
       <div>
         <Grid>
-          <ColMod xs={12} md={8} lg={9} lgOffset={1} >
+          <ColMod xs md lg={9} lgOffset={1}>
             <PaperMod elevation={19}>
               <Row >
                 <DisplayMod1 text="React Material UI">
@@ -30,7 +30,7 @@ class DashboardComponent extends Component {
                     action={this.props.TextAction}
                   />
                 </ColMod>
-                <ColMod lgOffset={0} >
+                <ColMod >
                   <TextFieldMod
                     label="Warning Numbers Only"
                     placeholder="Type Some numbers.. "
