@@ -8,4 +8,5 @@ export { DividerMod } from './other-components';
 export { PaperMod } from './paper';
 export { TextFieldMod, TextFieldRupiah, TextFieldStrictNum, TextFieldMaskText } from './text-field';
 export { ColMod } from './Col';
+export { ListMod } from './List';
 

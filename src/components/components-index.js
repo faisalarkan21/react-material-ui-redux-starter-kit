@@ -11,7 +11,7 @@ class DashboardComponent extends Component {
     return (
       <div>
         <Grid>
-          <ColMod xs md lg={9} lgOffset={1}>
+          <ColMod xs md lg={10} lgOffset={1}>
             <PaperMod elevation={19}>
               <Row >
                 <DisplayMod1 text="React Material UI">

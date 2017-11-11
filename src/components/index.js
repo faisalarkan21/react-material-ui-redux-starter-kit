@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Grid, Row } from 'react-flexbox-grid';
-import {
+import { Link } from 'react-router-dom';
+import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import BeenhereIcon from 'material-ui-icons/Beenhere';
 
-  Link,
-} from 'react-router-dom';
-
-import { ColMod, DisplayMod1, DisplayMod2, TextFieldRupiah, TextFieldStrictNum, TextFieldMaskText, CodeStyleMod, DividerMod, PaperMod, TextFieldMod } from './lib';
+import { ColMod, ListMod, DisplayMod1, CodeStyleMod, DividerMod, PaperMod } from './lib';
 
 
 class Dashboard extends Component {
@@ -14,20 +12,32 @@ class Dashboard extends Component {
     return (
       <div>
         <Grid>
-          <ColMod xs={12} md={8} lg={9} lgOffset={1} >
-            <PaperMod elevation={19}>
-              <Row >
-                <DisplayMod1 text="React Material UI">
-                  <CodeStyleMod text="Example" />
-                </DisplayMod1>
-              </Row>
-              <DividerMod />
-
-              <Link className="link" to="/custom-components"><DisplayMod2 text="Custom Material UI With Redux" /> </Link>
-              <Link className="link" to="/redux-form"><DisplayMod2 text="Redux Form" /> </Link>
-
-            </PaperMod>
-          </ColMod>
+          <Row>
+            <ColMod xs md lg={9} lgOffset={1}>
+              <PaperMod elevation={19}>
+                <Row >
+                  <DisplayMod1 text="React Material UI">
+                    <CodeStyleMod text="Example" />
+                  </DisplayMod1>
+                </Row>
+                <DividerMod />
+                <ListMod headerList="List Component" >
+                  <ListItem button component={Link} to="/custom-components">
+                    <ListItemIcon >
+                      <BeenhereIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Custom Material UI With Redux" />
+                  </ListItem>
+                  <ListItem button component={Link} to="/redux-form" >
+                    <ListItemIcon>
+                      <BeenhereIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Redux Form" />
+                  </ListItem>
+                </ListMod>
+              </PaperMod>
+            </ColMod>
+          </Row>
         </Grid>
       </div>
     );
