@@ -6,6 +6,11 @@ const globalStyle = {
   },
   styleFont1: {
     margin: 20,
+    fontSize: 50,
+  },
+  styleFont2: {
+    margin: 10,
+    fontSize: 20,
   },
   divider: {
     marginBottom: 20,

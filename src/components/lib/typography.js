@@ -30,7 +30,7 @@ DisplayMod1.propTypes = {
 
 function DisplayMod2(props) {
   return (
-    <Typography style={globalStyle.styleFont1} type="subheading" component="h3">
+    <Typography style={globalStyle.styleFont2} type="subheading" component="h3">
       {props.text}
       {props.children}
     </Typography>
