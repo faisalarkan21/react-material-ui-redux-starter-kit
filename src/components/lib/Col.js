@@ -7,7 +7,7 @@ import globalStyle from './style';
 
 function ColMod(props) {
   return (
-    <Col style={globalStyle.col}>
+    <Col {...props} className="col" style={globalStyle.col}>
       {props.children}
     </Col>
   );
