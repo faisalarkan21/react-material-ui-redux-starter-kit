@@ -1,45 +1,40 @@
 import * as ActionType from '../actions';
 
+const initialState =
+  {
+    errorMessageText: '',
+    errorStatusText: false,
+    errorMessageNumbers: '',
+    errorStatusNumber: false,
+    strictText: '',
+  };
 
-/**
- * Warning Numbers Only
- * @param {*} action action from actions/index.
- */
-
-const reducerNumbers = (state = '', action) => {
-  if (action.type === ActionType.NUMBERS_ONLY) {
-    return action.payload;
+const reducerCheck = (state = initialState, action) => {
+  switch (action.type) {
+    case ActionType.NUMBERS_ONLY:
+      return {
+        ...state,
+        errorMessageNumbers: action.payload.message,
+        errorStatusNumber: action.payload.isError,
+      };
+    case ActionType.TEXT_ONLY:
+      return {
+        ...state,
+        errorMessageText: action.payload.message,
+        errorStatusText: action.payload.isError,
+      };
+    case ActionType.STRICT_TEXT_ONLY:
+      return {
+        ...state,
+        strictText: action.payload.strictText,
+      };
+    default:
+      return state;
   }
-  return state;
-};
-
-/**
- * Warning Text Only
- * @param {*} action action from actions/index.
- */
-
-const reducerText = (state = '', action) => {
-  if (action.type === ActionType.TEXT_ONLY) {
-    return action.payload;
-  }
-  return state;
-};
-
-
-/**
- * Strict Numbers Only
- * @param {*} action action from actions/index.
- */
-
-const reducerStrictText = (state = '', action) => {
-  if (action.type === ActionType.STRICT_TEXT_ONLY) {
-    return action.payload;
-  }
-  return state;
 };
 
 
 export {
-  reducerText, reducerNumbers, reducerStrictText,
+  reducerCheck,
 };
 
