@@ -7,36 +7,41 @@ import ManualComponent from '../components/components-index';
 
 class customComponent extends React.Component {
   static propTypes ={
-    errorMessageNumbers: PropTypes.string,
-    errorMessageText: PropTypes.string,
     validatorText: PropTypes.func.isRequired,
     validatorNumbers: PropTypes.func.isRequired,
     validatorStrictText: PropTypes.func.isRequired,
-    strictText: PropTypes.string,
+    reducerCheck: PropTypes.shape({
+      errorMessageText: PropTypes.string,
+      errorStatusText: PropTypes.bool,
+      errorMessageNumbers: PropTypes.string,
+      errorStatusNumber: PropTypes.bool,
+      strictText: PropTypes.string,
+    }),
   }
+
+
   render() {
     const {
-      errorMessageNumbers,
-      errorMessageText,
+      reducerCheck,
       validatorText,
       validatorNumbers,
       validatorStrictText,
-      strictText,
     } = this.props;
 
     return (
       <div>
         <ManualComponent
           TextAction={validatorText}
-          TextIsError={!!errorMessageText}
-          TextErrorMessage={errorMessageText}
+          TextIsError={reducerCheck.errorStatusText}
+          TextErrorMessage={reducerCheck.errorMessageText}
 
           NumberAction={validatorNumbers}
-          NumberIsError={!!errorMessageNumbers}
-          NumberMessage={errorMessageNumbers}
+
+          NumberMessage={reducerCheck.errorMessageNumbers}
+          NumberIsError={reducerCheck.errorStatusNumber}
 
           StrictTextAction={validatorStrictText}
-          valueStrictText={strictText}
+          valueStrictText={reducerCheck.strictText}
         />
       </div>
 
@@ -46,9 +51,7 @@ class customComponent extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    errorMessageText: state.errorMessageText,
-    errorMessageNumbers: state.errorMessageNumbers,
-    strictText: state.strictText,
+    reducerCheck: state.reducerCheck,
   };
 }
 

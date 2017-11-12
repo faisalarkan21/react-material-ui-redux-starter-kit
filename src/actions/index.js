@@ -1,4 +1,4 @@
-import { customMessage, filterRegex } from '../middleware/rulesValidator';
+import { parseMessage, filterRegex } from '../middleware/rulesValidator';
 
 
 export const TEXT_ONLY = 'TEXT_ONLY';
@@ -19,9 +19,9 @@ export const textCheck = value => ({
 export const onlyTextCheck = event => (dispatch) => {
   const getText = event.target.value;
   if (getText.length === 0) {
-    dispatch(textCheck(customMessage.statusNull));
+    dispatch(textCheck(parseMessage('nullError', true)));
   } else if (!filterRegex.String.test(getText)) {
-    dispatch(textCheck(customMessage.statusStringError));
+    dispatch(textCheck(parseMessage('stringError', true)));
   } else {
     dispatch(textCheck(''));
   }
@@ -34,7 +34,7 @@ export const onlyTextCheck = event => (dispatch) => {
  * @param {*} value from onlyNumberCheck
  */
 
-export const onlyNumbers = value => ({
+export const checkNumbers = value => ({
   type: NUMBERS_ONLY,
   payload: value,
 });
@@ -43,11 +43,11 @@ export const onlyNumbers = value => ({
 export const onlyNumbersCheck = event => (dispatch) => {
   const getNumbers = event.target.value;
   if (getNumbers.length === 0) {
-    dispatch(onlyNumbers(customMessage.statusNull));
+    dispatch(checkNumbers(parseMessage('nullError', true)));
   } else if (!filterRegex.Number.test(getNumbers)) {
-    dispatch(onlyNumbers(customMessage.statusNumError));
+    dispatch(checkNumbers(parseMessage('numberError', true)));
   } else {
-    dispatch(onlyNumbers(''));
+    dispatch(checkNumbers(''));
   }
   return null;
 };
@@ -66,14 +66,14 @@ export const getStrictText = value => ({
 
 export const strictTextCheck = event => (dispatch, getState) => {
   const getText = event.target.value;
-  const { strictText } = getState();
+  const { reducerCheck: { strictText } } = getState();
 
   if (getText.length === 0) {
-    dispatch(getStrictText(''));
+    dispatch(getStrictText({ strictText: '' }));
   } else if (filterRegex.String.test(getText)) {
-    dispatch(getStrictText(getText));
+    dispatch(getStrictText({ strictText: getText }));
   } else if (!filterRegex.String.test(getText)) {
-    dispatch(getStrictText(strictText));
+    dispatch(getStrictText({ strictText }));
   }
 };
 
